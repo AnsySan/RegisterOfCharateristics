@@ -1,4 +1,4 @@
-package com.clone.twitter.register_of_characteristics.entity;
+package com.ansysan.register_of_characteristics.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "comments")
-public class Comments {
+@Table(name = "comment")
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,9 +29,8 @@ public class Comments {
     @Column(name = "lastEditDate", nullable = false)
     private LocalDateTime lastEditDate;
 
-    @ManyToOne
-    @JoinColumn(name = "insertedById", nullable = false)
-    private User insertedById;
+    @Column(name = "insertedById", nullable = false)
+    private Long insertedById;
 
     @ManyToOne
     @JoinColumn(name = "idNews", nullable = false)

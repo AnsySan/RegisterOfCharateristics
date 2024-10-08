@@ -1,4 +1,4 @@
-package com.clone.twitter.register_of_characteristics;
+package com.ansysan.register_of_characteristics;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

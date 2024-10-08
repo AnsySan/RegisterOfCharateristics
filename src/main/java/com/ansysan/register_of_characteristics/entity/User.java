@@ -1,4 +1,4 @@
-package com.clone.twitter.register_of_characteristics.entity;
+package com.ansysan.register_of_characteristics.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
