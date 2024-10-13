@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -31,6 +30,9 @@ public class News {
     @Column(name = "lastEditDate")
     private LocalDateTime lastEditDate;
 
+    @OneToMany(mappedBy = "news", cascade = CascadeType.ALL)
+    private List<Comment> comment;
+
     @ManyToOne
     @JoinColumn(name = "insertedById", nullable = false)
     private User inserterById;
@@ -39,7 +41,8 @@ public class News {
     @JoinColumn(name = "updatedById", nullable = false)
     private User updatedById;
 
-    @OneToMany
-    @Column(name = "[]comments")
-    private List<Comment> comments = new ArrayList<>();
+    public String toStringForFind(){
+        return id + " " + " " + title + " " +
+                text + " " + creationDate + " " + lastEditDate;
+    }
 }

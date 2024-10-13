@@ -34,5 +34,10 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "idNews", nullable = false)
-    private News idNews;
+    private News news;
+
+    public String toStringForFind(){
+        return id + " "  + " " + text + " " +
+                createdDate + " " + lastEditDate;
+    }
 }

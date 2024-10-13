@@ -9,7 +9,7 @@ import org.mapstruct.ReportingPolicy;
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface NewsMapper {
 
-    @Mapping(target = "comments")
+    @Mapping(target = "comment", source = "sourceComments")
     News toEntity(NewsDto newsDto);
 
     NewsDto toDto(News news);

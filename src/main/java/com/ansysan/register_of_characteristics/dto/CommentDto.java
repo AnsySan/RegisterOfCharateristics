@@ -23,4 +23,6 @@ public class CommentDto {
     @NotNull
     private LocalDateTime lastEditDate;
 
+    private Long idNews;
+
 }

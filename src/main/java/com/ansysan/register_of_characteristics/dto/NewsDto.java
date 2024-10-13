@@ -6,8 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.catalina.LifecycleState;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Builder
 @Data
@@ -28,5 +30,7 @@ public class NewsDto {
 
     @NotNull
     private LocalDateTime lastEditDate;
+
+    private List<CommentDto> sourceComments;
 
 }
