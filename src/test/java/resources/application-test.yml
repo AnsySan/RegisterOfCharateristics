@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    password: test
+    username: test
+  jpa:
+    properties:
+      hibernate:
+        hdm2ddl:
+          auto: update
